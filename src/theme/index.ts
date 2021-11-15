@@ -1,6 +1,4 @@
-import { createTheme, responsiveFontSizes } from "@mui/material";
-import merge from "lodash.merge";
-import { THEMES } from "../constants";
+import { createTheme, Theme, ThemeOptions } from "@mui/material";
 import {
   error,
   info,
@@ -12,7 +10,7 @@ import {
 
 const fontSize = 14;
 
-const baseOptions = {
+const baseOptions: ThemeOptions = {
   direction: "ltr",
   breakpoints: {
     values: {
@@ -22,6 +20,22 @@ const baseOptions = {
       lg: 1280,
       xl: 1920,
     },
+  },
+  palette: {
+    primary,
+    secondary,
+    error,
+    warning,
+    success,
+    info,
+    divider: secondary[300],
+    background: { default: "#f3f4f9" },
+    text: {
+      primary: secondary[500],
+      secondary: secondary[300],
+      disabled: secondary[400],
+    },
+    mode: "light",
   },
   components: {
     MuiAvatar: {
@@ -155,13 +169,6 @@ const baseOptions = {
         },
       },
     },
-    MuiTabPanel: {
-      styleOverrides: {
-        root: {
-          padding: 0,
-        },
-      },
-    },
     MuiButtonBase: {
       styleOverrides: {
         root: {
@@ -181,6 +188,15 @@ const baseOptions = {
             opacity: 1,
             fontWeight: 500,
           },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow: "none",
+          border: "1px solid #E5EAF2",
+          borderRadius: 8,
         },
       },
     },
@@ -222,94 +238,14 @@ const baseOptions = {
   },
 };
 
-const themesOptions = {
-  [THEMES.LIGHT]: {
-    palette: {
-      primary,
-      secondary,
-      error,
-      warning,
-      success,
-      info,
-      divider: secondary[300],
-      background: { default: "#f3f4f9" },
-      text: {
-        primary: secondary[500],
-        secondary: secondary[300],
-        disabled: secondary[400],
-      },
-      mode: "light",
-    },
-    components: {
-      MuiCard: {
-        styleOverrides: {
-          root: {
-            boxShadow: "none",
-            border: "1px solid #E5EAF2",
-            borderRadius: 8,
-          },
-        },
-      },
-    },
-  },
-  [THEMES.DARK]: {
-    palette: {
-      primary,
-      error,
-      warning,
-      success,
-      info,
-      background: {
-        default: "#1e2732",
-        paper: "#222b36",
-      },
-      mode: "dark",
-    },
-
-    components: {
-      MuiTableCell: {
-        styleOverrides: {
-          root: {
-            border: "none",
-          },
-        },
-      },
-      MuiPopover: {
-        styleOverrides: {
-          root: {
-            "& .MuiPopover-paper": {
-              border: "1px solid rgba(255, 255, 255, 0.12)",
-            },
-          },
-        },
-      },
-    },
-  },
-};
-
 export type themeSettingsProps = {
   theme: string;
   direction: string;
   responsiveFontSizes: boolean;
 };
 
-export const ukoTheme = (config: themeSettingsProps) => {
-  let themeOption = themesOptions[config.theme];
-
-  if (!themeOption) {
-    console.warn(new Error(`The theme ${config.theme} is not valid`));
-    themeOption = themesOptions[THEMES.LIGHT];
-  }
-  //@ts-ignore
-  const merged = merge({}, baseOptions, themeOption, {
-    direction: config.direction,
-  });
-  //@ts-ignore
-  let theme = createTheme(merged);
-
-  if (config.responsiveFontSizes) {
-    theme = responsiveFontSizes(theme);
-  }
+export const ukoTheme = () => {
+  let theme: Theme = createTheme(baseOptions);
 
   // theme shadows
   theme.shadows[1] = "0px 4px 23px rgba(0, 0, 0, 0.12)";
