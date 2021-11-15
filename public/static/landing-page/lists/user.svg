@@ -1,0 +1,16 @@
+<svg width="206" height="156" viewBox="0 0 206 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1945:8123" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="206" height="156">
+<rect width="206" height="156" rx="8" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_1945:8123)">
+<rect y="22" width="206" height="139" fill="#ECEFF5"/>
+<rect x="19" y="41" width="168" height="13" rx="6.5" fill="white"/>
+<rect x="19" y="89" width="168" height="13" rx="6.5" fill="white"/>
+<rect x="19" y="65" width="168" height="13" rx="6.5" fill="white"/>
+<rect x="19" y="113" width="168" height="13" rx="6.5" fill="white"/>
+<path d="M0 23.0859L-8.78013e-07 2.99933C-9.74578e-07 0.790195 1.79086 -1.00066 4 -1.00066L283.969 -1.00068L283.969 23.0859L0 23.0859Z" fill="#94A4C4"/>
+<circle cx="12.0977" cy="11.0958" r="3.78716" fill="white"/>
+<circle cx="24.7168" cy="11.0958" r="3.78716" fill="white"/>
+<circle cx="37.3438" cy="11.0958" r="3.78716" fill="white"/>
+</g>
+</svg>
