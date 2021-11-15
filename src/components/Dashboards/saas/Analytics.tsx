@@ -4,7 +4,6 @@ import FlexBox from "components/FlexBox";
 import { H5 } from "components/Typography";
 import { FC } from "react";
 import Chart from "react-apexcharts";
-import { useTranslation } from "react-i18next";
 import AnalyticsPopover from "./AnalyticsPopover";
 
 const data = {
@@ -14,7 +13,6 @@ const data = {
 
 const Analytics: FC = () => {
   const theme = useTheme();
-  const { t } = useTranslation();
 
   const chartOptions: ApexOptions = {
     chart: { background: "transparent" },
@@ -76,7 +74,7 @@ const Analytics: FC = () => {
       }}
     >
       <FlexBox alignItems="center" justifyContent="space-between">
-        <H5>{t("Analytics")}</H5>
+        <H5>Analytics</H5>
         <AnalyticsPopover />
       </FlexBox>
 

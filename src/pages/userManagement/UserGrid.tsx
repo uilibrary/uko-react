@@ -4,7 +4,6 @@ import SearchInput from "components/SearchInput";
 import UserCard from "components/userManagement/UserCard";
 import useTitle from "hooks/useTitle";
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 // styled component
@@ -26,7 +25,6 @@ const StyledFlexBox = styled(FlexBox)(({ theme }) => ({
 const UserGrid: FC = () => {
   // change navbar title
   useTitle("User Grid");
-  const { t } = useTranslation();
 
   const navigate = useNavigate();
   const handleAddUser = () => navigate("/dashboard/add-user");
@@ -36,7 +34,7 @@ const UserGrid: FC = () => {
       <StyledFlexBox>
         <SearchInput placeholder="Search user..." />
         <Button variant="contained" onClick={handleAddUser}>
-          {t("Add New User")}
+          Add New User
         </Button>
       </StyledFlexBox>
 

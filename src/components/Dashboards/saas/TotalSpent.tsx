@@ -3,7 +3,6 @@ import { ApexOptions } from "apexcharts";
 import { H2, H5 } from "components/Typography";
 import { FC } from "react";
 import Chart from "react-apexcharts";
-import { useTranslation } from "react-i18next";
 
 const data = {
   series: [
@@ -30,7 +29,6 @@ const data = {
 
 const TotalSpent: FC = () => {
   const theme = useTheme();
-  const { t } = useTranslation();
 
   const chartOptions: ApexOptions = {
     chart: {
@@ -124,7 +122,7 @@ const TotalSpent: FC = () => {
         [theme.breakpoints.down(425)]: { padding: "1.5rem" },
       }}
     >
-      <H5>{t("Total Spent")}</H5>
+      <H5>Total Spent</H5>
       <H2 color="primary.main">$682.5</H2>
 
       <Box

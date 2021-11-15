@@ -1,19 +1,18 @@
-import { Box, IconButton, MenuItem, Popover, styled } from '@mui/material';
-import { H6 } from 'components/Typography';
-import { FC, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Box, IconButton, MenuItem, Popover, styled } from "@mui/material";
+import { H6 } from "components/Typography";
+import { FC, useRef, useState } from "react";
 
 // dummy language options
 const languageOptions: {
   [key: string]: { icon: string; label: string };
 } = {
   en: {
-    icon: '/static/flags/usa.png',
-    label: 'English',
+    icon: "/static/flags/usa.png",
+    label: "English",
   },
   es: {
-    icon: '/static/flags/spain.png',
-    label: 'Spanish',
+    icon: "/static/flags/spain.png",
+    label: "Spanish",
   },
   //   hi: {
   //     icon: '/static/flags/in.png',
@@ -23,35 +22,33 @@ const languageOptions: {
 
 // custom styled components
 const IconWrapper = styled(Box)(() => ({
-  display: 'flex',
+  display: "flex",
   height: 20,
   width: 20,
-  '& img': {
-    width: '100%',
-    borderRadius: '50%',
-    objectFit: 'cover',
+  "& img": {
+    width: "100%",
+    borderRadius: "50%",
+    objectFit: "cover",
   },
 }));
 
 const ItemWrapper = styled(Box)(() => ({
-  display: 'flex',
-  '& img': { width: '100%' },
+  display: "flex",
+  "& img": { width: "100%" },
 }));
 
 const LanguagePopover: FC = () => {
   const anchorRef = useRef(null);
   const [open, setOpen] = useState(false);
-  const { i18n } = useTranslation();
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   const handleChangeLanguage = (language: string) => {
-    i18n.changeLanguage(language);
     setOpen(false);
   };
 
-  const selectedLanguage = languageOptions[i18n.language];
+  const selectedLanguage = languageOptions["en"];
 
   return (
     <>
@@ -65,8 +62,8 @@ const LanguagePopover: FC = () => {
         open={open}
         onClose={handleClose}
         anchorEl={anchorRef.current}
-        anchorOrigin={{ horizontal: 'center', vertical: 'bottom' }}
-        PaperProps={{ sx: { width: 150, padding: '0.5rem 0' } }}
+        anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
+        PaperProps={{ sx: { width: 150, padding: "0.5rem 0" } }}
       >
         {Object.keys(languageOptions).map((language: string) => (
           <MenuItem
@@ -74,10 +71,6 @@ const LanguagePopover: FC = () => {
             onClick={() => handleChangeLanguage(language)}
           >
             <ItemWrapper>
-              {/* <img
-                alt={languageOptions[language].label}
-                src={languageOptions[language].icon}
-              /> */}
               <H6 fontWeight={600} ml={1}>
                 {languageOptions[language].label}
               </H6>

@@ -1,7 +1,6 @@
 import { alpha, Box, Card, styled } from "@mui/material";
 import { H3, H5 } from "components/Typography";
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
 
 // root component interface
 interface SaaSCardProps {
@@ -26,7 +25,6 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 const SaaSCard: FC<SaaSCardProps> = ({ card }) => {
   const { Icon, title, color, price } = card;
-  const { t } = useTranslation();
 
   return (
     <StyledCard>
@@ -45,7 +43,7 @@ const SaaSCard: FC<SaaSCardProps> = ({ card }) => {
         <Icon sx={{ color }} />
       </Box>
       <Box mt={{ xs: "1rem", sm: 0 }}>
-        <H5 color="text.disabled">{t(title)}</H5>
+        <H5 color="text.disabled">{title}</H5>
         <H3>${price}</H3>
       </Box>
     </StyledCard>

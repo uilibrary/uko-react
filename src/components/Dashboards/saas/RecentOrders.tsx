@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import { H5, Small } from "components/Typography";
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
 import ScrollBar from "simplebar-react";
 
 const commonCSS = {
@@ -40,11 +39,9 @@ const BodyTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 const RecentOrders: FC = () => {
-  const { t } = useTranslation();
-
   return (
     <Card sx={{ padding: "2rem" }}>
-      <H5>{t("Recent Orders")}</H5>
+      <H5>Recent Orders</H5>
 
       <ScrollBar>
         <Table>

@@ -6,7 +6,6 @@ import { H3, H4, H6, Small } from "components/Typography";
 import FollowerIcon from "icons/FollowerIcon";
 import UserPlusIcon from "icons/UserPlusIcon";
 import { FC, MouseEvent, useState } from "react";
-import { useTranslation } from "react-i18next";
 import PostCard from "./PostCard";
 
 // styled components
@@ -32,7 +31,6 @@ const FollowWrapper = styled(Box)(() => ({
 }));
 
 const Profile: FC = () => {
-  const { t } = useTranslation();
   const [moreEl, setMoreEl] = useState<null | HTMLElement>(null);
   const handleMoreOpen = (event: MouseEvent<HTMLButtonElement>) => {
     setMoreEl(event.currentTarget);
@@ -50,7 +48,7 @@ const Profile: FC = () => {
               </IconWrapper>
               <Box marginLeft={1.5}>
                 <H6 color="text.disabled" lineHeight={1}>
-                  {t("Following")}
+                  Following
                 </H6>
                 <H3 lineHeight={1} mt={0.6}>
                   93,675
@@ -63,7 +61,7 @@ const Profile: FC = () => {
               </IconWrapper>
               <Box marginLeft={1.5}>
                 <H6 color="text.disabled" lineHeight={1}>
-                  {t("Followers")}
+                  Followers
                 </H6>
                 <H3 lineHeight={1} mt={0.6}>
                   82,469
@@ -75,7 +73,7 @@ const Profile: FC = () => {
           <Divider />
 
           <Box padding={3}>
-            <H4 fontWeight={600}>{t("About")}</H4>
+            <H4 fontWeight={600}>About</H4>
             <Small mt={1} display="block" lineHeight={1.9}>
               Tart I love sugar plum I love oat cake. Sweet roll caramels I love
               jujubes. Topping cake wafer..

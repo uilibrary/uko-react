@@ -2,13 +2,11 @@ import { Box, Card, Rating } from "@mui/material";
 import FlexBox from "components/FlexBox";
 import { H5, Small } from "components/Typography";
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
 
 const TopSelling: FC = () => {
-  const { t } = useTranslation();
   return (
     <Card sx={{ padding: "2rem", height: "100%" }}>
-      <H5>{t("Top selling Products")}</H5>
+      <H5>Top selling Products</H5>
 
       {productList.map((product, index) => (
         <FlexBox key={index} mt="1.2rem">

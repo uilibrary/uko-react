@@ -9,7 +9,6 @@ import {
 import { H2 } from "components/Typography";
 import { TitleContext } from "contexts/TitleContext";
 import { FC, useContext } from "react";
-import { useTranslation } from "react-i18next";
 import LanguagePopover from "./popovers/LanguagePopover";
 import NotificationsPopover from "./popovers/NotificationsPopover";
 import ProfilePopover from "./popovers/ProfilePopover";
@@ -51,7 +50,6 @@ const ToggleIcon = styled(Box)(({ theme }) => ({
 const DashboardNavbar: FC<DashboardNavBarProps> = ({
   setShowMobileSideBar,
 }) => {
-  const { t } = useTranslation();
   const { title } = useContext(TitleContext);
   const upSm = useMediaQuery((theme: Theme) => theme.breakpoints.up("sm"));
   const downSm = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
@@ -98,7 +96,7 @@ const DashboardNavbar: FC<DashboardNavBarProps> = ({
           fontWeight="700"
           color="text.primary"
         >
-          {t(title)}
+          {title}
         </H2>
 
         <Box flexGrow={1} ml={1} />

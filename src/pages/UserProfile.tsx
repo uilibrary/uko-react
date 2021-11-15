@@ -11,7 +11,6 @@ import Profile from "components/userProfile/Profile";
 import useAuth from "hooks/useAuth";
 import useTitle from "hooks/useTitle";
 import { FC, SyntheticEvent, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 // styled components
 const StyledCard = styled(Card)(() => ({
@@ -55,7 +54,6 @@ const UserProfile: FC = () => {
   // change navbar title
   useTitle("User Profile");
   const { user } = useAuth();
-  const { t } = useTranslation();
 
   const [value, setValue] = useState("1");
 
@@ -101,10 +99,10 @@ const UserProfile: FC = () => {
             </ContentWrapper>
 
             <StyledTabList onChange={handleChange}>
-              <StyledTab label={t("Profile")} value="1" />
-              <StyledTab label={t("Follower")} value="2" />
-              <StyledTab label={t("Friends")} value="3" />
-              <StyledTab label={t("Gallery")} value="4" />
+              <StyledTab label="Profile" value="1" />
+              <StyledTab label="Follower" value="2" />
+              <StyledTab label="Friends" value="3" />
+              <StyledTab label="Gallery" value="4" />
             </StyledTabList>
           </FlexBox>
         </StyledCard>
