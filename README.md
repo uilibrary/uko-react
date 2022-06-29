@@ -1,6 +1,6 @@
-<h1><a href="https://ui-lib.com/downloads/uko-lite-react-client-admin-dashboard/">Uko React Admin Dashboard Template</a></h1>
+<h1><a href="https://ui-lib.com/downloads/uko-lite-react-dashboard/">Uko React Admin Dashboard Template</a></h1>
 
-<a href="https://ui-lib.com/downloads/uko-lite-react-client-admin-dashboard/"><img alt="Uko React Admin" src="https://ui-lib.com/wp-content/uploads/2022/06/uko-react-free.png" /></a>
+<a href="https://uko-react-free.netlify.app/"><img alt="Uko React Admin" src="https://ui-lib.com/wp-content/uploads/2022/06/uko-react-free.png" /></a>
 
 <p>Professional React dashboard template with robust MUI components.
 Its clean codebase and design significantly reduce development costs, time, and effort.</p>
@@ -14,7 +14,7 @@ Its clean codebase and design significantly reduce development costs, time, and 
 <tr>
 <td>
 <a href="https://uko-react-free.netlify.app/">Live Preview</a> <br>
-<a href="https://ui-lib.com/downloads/uko-lite-react-client-admin-dashboard/">Download Uko Lite</a>
+<a href="https://ui-lib.com/downloads/uko-lite-react-dashboard/">Download Uko Lite</a>
 </td>
 <td>
 <a href="https://uko-react.vercel.app/dashboard/sales">Live Preview</a> <br>
