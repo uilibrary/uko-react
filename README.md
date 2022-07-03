@@ -5,7 +5,37 @@
 <p>Professional React dashboard template with robust MUI components.
 Its clean codebase and design significantly reduce development costs, time, and effort.</p>
 
-<h2>Features</h2>
+<h2>Features and Pages</h2>
+<ul>
+  <li>JWT authentication</li>
+  <li>React Router</li>
+  <li>React Hooks</li>
+  <li>Lazy loading components</li>
+  <li>Code splitting</li>
+  <li><a href="">Dashboard</a></li>
+  <li>Users
+    <ul>
+      <li><a href="">User Profile</a></li>
+      <li><a href="">User List</a></li>
+      <li><a href="">User Grid</a></li>
+      <li><a href="">Add User</a></li>
+    </ul>
+  </li>
+  <li>UI kits
+    <ul>
+      <li><a href="">All MUI components</a></li>
+    </ul>
+  </li>
+  <li>Session pages
+    <ul>
+      <li><a href="">Sign in</a></li>
+      <li><a href="">Sign up</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+<h2>Free vs Pro</h2>
 <table>
 <tr>
 <th>Uko Lite</th>
