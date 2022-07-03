@@ -12,24 +12,24 @@ Its clean codebase and design significantly reduce development costs, time, and 
   <li>React Hooks</li>
   <li>Lazy loading components</li>
   <li>Code splitting</li>
-  <li><a href="">Dashboard</a></li>
+  <li><a href="https://uko-react-free.netlify.app/dashboard">Dashboard</a></li>
   <li>Users
     <ul>
-      <li><a href="">User Profile</a></li>
-      <li><a href="">User List</a></li>
-      <li><a href="">User Grid</a></li>
-      <li><a href="">Add User</a></li>
+      <li><a href="https://uko-react-free.netlify.app/dashboard/user-profile">User Profile</a></li>
+      <li><a href="https://uko-react-free.netlify.app/dashboard/user-list">User List</a></li>
+      <li><a href="https://uko-react-free.netlify.app/dashboard/user-grid">User Grid</a></li>
+      <li><a href="https://uko-react-free.netlify.app/dashboard/add-user">Add User</a></li>
     </ul>
   </li>
   <li>UI kits
     <ul>
-      <li><a href="">All MUI components</a></li>
+      <li><a href="https://mui.com/components/">MUI components</a></li>
     </ul>
   </li>
   <li>Session pages
     <ul>
-      <li><a href="">Sign in</a></li>
-      <li><a href="">Sign up</a></li>
+      <li><a href="https://uko-react-free.netlify.app/login">Sign in</a></li>
+      <li><a href="https://uko-react-free.netlify.app/register">Sign up</a></li>
     </ul>
   </li>
 </ul>
