@@ -5,7 +5,37 @@
 <p>Professional React dashboard template with robust MUI components.
 Its clean codebase and design significantly reduce development costs, time, and effort.</p>
 
-<h2>Features</h2>
+<h2>Features and Pages</h2>
+<ul>
+  <li>JWT authentication</li>
+  <li>React Router</li>
+  <li>React Hooks</li>
+  <li>Lazy loading components</li>
+  <li>Code splitting</li>
+  <li><a href="https://uko-react-free.netlify.app/dashboard">Dashboard</a></li>
+  <li>Users
+    <ul>
+      <li><a href="https://uko-react-free.netlify.app/dashboard/user-profile">User Profile</a></li>
+      <li><a href="https://uko-react-free.netlify.app/dashboard/user-list">User List</a></li>
+      <li><a href="https://uko-react-free.netlify.app/dashboard/user-grid">User Grid</a></li>
+      <li><a href="https://uko-react-free.netlify.app/dashboard/add-user">Add User</a></li>
+    </ul>
+  </li>
+  <li>UI kits
+    <ul>
+      <li><a href="https://mui.com/components/">MUI components</a></li>
+    </ul>
+  </li>
+  <li>Session pages
+    <ul>
+      <li><a href="https://uko-react-free.netlify.app/login">Sign in</a></li>
+      <li><a href="https://uko-react-free.netlify.app/register">Sign up</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+<h2>Free vs Pro</h2>
 <table>
 <tr>
 <th>Uko Lite</th>
